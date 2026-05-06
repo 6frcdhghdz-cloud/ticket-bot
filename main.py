@@ -1,5 +1,6 @@
+print("🚀 BOT STARTED SUCCESSFULLY")
 
-print("🚀 BOT STARTED SUCCESSFULLY")import requests
+import requests
 import os
 import time
 from dotenv import load_dotenv
