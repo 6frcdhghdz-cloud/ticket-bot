@@ -145,6 +145,16 @@ while True:
 events = get_events()
 print(f"Found {len(events)} events")
 
+seen = set()
+
+send_message("Pro Ticket Bot Online")
+
+while True:
+    print("🔄 scanning...")
+
+    events = get_events()
+    print(f"Found {len(events)} events")
+
     for e in events:
         key = e["name"] + e["date"]
 
