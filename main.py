@@ -1,4 +1,5 @@
-import requests
+
+print("🚀 BOT STARTED SUCCESSFULLY")import requests
 import os
 import time
 from dotenv import load_dotenv
@@ -111,7 +112,7 @@ def estimate_resale(event):
 # ---------------- FILTER LOGIC ----------------
 def is_profitable(event):
     score = demand_score(event)
-    return score >= 5  # only strong opportunities
+    return score >= 2  # only strong opportunities
 
 # ---------------- FORMAT ALERT ----------------
 def format_message(event, resale):
@@ -139,7 +140,9 @@ seen = set()
 send_message("✅ Pro Ticket Bot Online")
 
 while True:
-    events = get_events()
+    print("🔄 scanning...")
+events = get_events()
+print(f"Found {len(events)} events")
 
     for e in events:
         key = e["name"] + e["date"]
