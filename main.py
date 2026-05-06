@@ -148,9 +148,11 @@ seen = set()
 
 send_message("Pro Ticket Bot Online")
 
-while True:
-    print("🔄 scanning...")
+seen = set()
 
+send_message("Pro Ticket Bot Online")
+
+while True:
     events = get_events()
     print(f"Found {len(events)} events")
 
