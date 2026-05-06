@@ -67,7 +67,7 @@ def estimate_resale(event):
         return base * 1.5
 
 def is_profitable(event):
-    return demand_score(event) >= 2
+    return True
 
 def format_message(event, resale):
     return f"""
